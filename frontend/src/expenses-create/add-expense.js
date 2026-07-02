@@ -1,3 +1,5 @@
+import { createExpense } from "./post-expense.js";
+
 export function validateFormData(data) {
     if (!data) {
         return { success: false, error: new Error("data undefined") };
@@ -34,4 +36,13 @@ export function validateFormData(data) {
     }
 
     return { success: true };
+}
+export async function addExpense(data) {
+    const validation = validateFormData(data);
+
+    if (!validation.success) {
+        throw validation.error;
+    }
+
+    return await createExpense(data);
 }
