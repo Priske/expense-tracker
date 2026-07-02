@@ -1,4 +1,4 @@
-import { getExpensesData } from "./fetch-expenses";
+import { getExpensesData } from "./fetch-expenses.js";
 
 export const __only_for_test = { showLoading, showError, showEmptyState, renderExpenses, showExpenses };
 
