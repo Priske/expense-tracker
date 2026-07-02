@@ -1,0 +1,16 @@
+export async function createExpense(data) {
+    const response = await fetch("http://localhost:3000/expenses", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(expense),
+    });
+
+    if (!response.ok) {
+        throw new Error("Failed to add expense");
+    }
+
+    return await response.json();
+
+}
