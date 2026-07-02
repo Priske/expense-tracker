@@ -4,7 +4,7 @@ export async function createExpense(data) {
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify(expense),
+        body: JSON.stringify(data),
     });
 
     if (!response.ok) {
