@@ -1,6 +1,7 @@
 import { getExpensesData } from "./fetch-expenses.js";
+import { showError } from "../ui-helpers.js";
 
-export const __only_for_test = { showLoading, showError, showEmptyState, renderExpenses, showExpenses };
+export const __only_for_test = { showLoading, showEmptyState, renderExpenses, showExpenses };
 
 export function showLoading(element) {
     const p = document.createElement("p");
@@ -8,13 +9,6 @@ export function showLoading(element) {
     element.appendChild(p);
 }
 
-export function showError(element, error) {
-    const p = document.createElement("p");
-    p.textContent = error.message;
-    p.style.color = "#FF0000";
-    element.appendChild(p);
-
-}
 
 export function showEmptyState(element) {
     const p = document.createElement("p");

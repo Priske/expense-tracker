@@ -14,15 +14,6 @@ describe("showLoading", () => {
     });
 });
 
-describe("showError", () => {
-    it("adds a paragraph with error message in red text", () => {
-        const element = document.createElement("div");
-        const error = new Error("test");
-        __only_for_test.showError(element, error);
-
-        expect(element.innerHTML).toBe('<p style="color: rgb(255, 0, 0);">test</p>');
-    });
-});
 
 
 describe("showEmptyState", () => {
